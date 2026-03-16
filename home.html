@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chai Junction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+<style>
+   /* Cart Section */
+
+.cart-section{
+max-width:420px;
+margin:40px auto;
+background:#fffaf3;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+border:2px solid #d2a679;
+}
+
+/* Header */
+
+.cart-header{
+text-align:center;
+margin-bottom:20px;
+}
+
+.cart-title{
+color:#6b3e26;
+font-size:28px;
+margin:0;
+}
+
+.cart-sub{
+color:#a67c52;
+font-size:14px;
+}
+
+/* Items Box */
+
+.cart-items{
+min-height:120px;
+background:white;
+border-radius:8px;
+border:1px solid #e0c9a6;
+padding:10px;
+}
+
+/* Cart Item */
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+padding:10px;
+border-bottom:1px dashed #d2a679;
+font-size:16px;
+color:#4a2c2a;
+}
+
+/* Empty Cart */
+
+.empty-cart{
+text-align:center;
+color:#999;
+font-size:15px;
+}
+
+/* Summary */
+
+.cart-summary{
+text-align:center;
+margin-top:15px;
+}
+
+#cart-total{
+color:#8b4513;
+font-size:22px;
+}
+
+/* Buttons */
+
+.cart-buttons{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+}
+
+.clear-btn{
+background:#c0392b;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.clear-btn:hover{
+background:#922b21;
+}
+
+.checkout-btn{
+background:#27ae60;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.checkout-btn:hover{
+background:#1e8449;
+}
+
+/* Mobile */
+
+@media(max-width:500px){
+
+.cart-section{
+width:90%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+   <nav class="navbar">
+    <a href="#home" class="logo">
+        <img src="https://i.pinimg.com/1200x/88/ec/73/88ec73127ea40b44db1e7c4c1b6b2863.jpg" alt="Chai Junction logo">
+        <span>Chai Junction</span>
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="admin/user_login.php">Login</a></li>
+       
+    </ul>
+
+    <div class="menu-toggle">&#9776;</div>
+</nav>
+
+    <!-- Hero -->
+    <section id="home" class="home">
+    <div class="overlay">
+        <h4 class="subtitle">Since 2020 • Premium Tea & Coffee</h4>
+        <h1>Welcome to <span>Chai Junction</span></h1>
+        <br>
+        <br>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn primary">Explore Menu</a>
+            <a href="#contact" class="btn secondary">Book Table</a>
+        </div>
+        <br>
+        <br>
+        <div class="hero-features">
+            <div>☕ Freshly Brewed Daily</div>
+            <div>🌿 100% Organic Ingredients</div>
+            <div>🔥 Strong & Kadak Taste</div>
+            <div>❤️ Loved by 5000+ Customers</div>
+        </div>
+        <br>
+        <!-- NEW EXTRA DETAIL -->
+        <div class="hero-stats">
+            <div>
+                <h3>5K+</h3>
+                <span>Happy Customers</span>
+            </div>
+            <div>
+                <h3>25+</h3>
+                <span>Tea Varieties</span>
+            </div>
+            <div>
+                <h3>10+</h3>
+                <span>Special Snacks</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- About -->
+<section id="about" class="about">
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Cafe Tea">
+        </div>
+
+        <div class="about-content">
+            <h4 class="section-subtitle">Our Story</h4>
+            <h2>About <span>Chai Junction</span></h2>
+
+            <p>
+                At Chai Junction, we blend traditional Indian flavors with a modern café vibe.
+                Our mission is to create a cozy place where friends meet, ideas brew,
+                and every sip feels special.
+            </p>
+
+            <div class="about-features">
+                <div>☕ Premium Quality Chai</div>
+                <div>🌿 Fresh & Organic Ingredients</div>
+                <div>🔥 Warm & Friendly Atmosphere</div>
+            </div>
+
+            <a href="#contact" class="about-btn">Visit Us</a>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Menu -->
+<section id="menu" class="menu">
+    <div class="menu-header">
+        <h4 class="section-subtitle">Our Best Collection</h4>
+        <h2>Our Special <span>Menu</span></h2>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="menu-card">
+            <div class="menu-img">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="">
+                <div class="price">₹20</div>
+            </div>
+            <h3>Kadak Chai</h3>
+            <p>Strong & Refreshing Taste</p>
+            <a href="#" class="order-btn" onclick="addToCart('Kadak Chai',20)">Order Now</a>
+        </div>
+
+        <div class="menu-card">
+            <div class="menu-img">
+                <img src="https://media.istockphoto.com/id/629795068/photo/masala-chai-with-different-ingredients.jpg?s=612x612&w=0&k=20&c=5qTKxLNLlWDCAW91QZP-ekk-rKUA54erokKD1jf0jGk=" alt="">
+                <div class="price">₹25</div>
+            </div>
+            <h3>Masala Sip</h3>
+            <p>Spicy & Flavourful Delight</p>
+            <a href="#" class="order-btn" onclick="addToCart('Masala Sip',25)">Order Now</a>
+        </div>
+
+        <div class="menu-card">
+            <div class="menu-img">
+                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096" alt="">
+                <div class="price">₹60</div>
+            </div>
+            <h3>Cold Coffee</h3>
+            <p>Chilled & Creamy Treat</p>
+            <a href="#" class="order-btn" onclick="addToCart('Cold Coffee',60)">Order Now</a>
+        </div>
+
+        <div class="menu-card">
+            <div class="menu-img">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="">
+                <div class="price">₹30</div>
+            </div>
+            <h3>Green Tea</h3>
+            <p>Healthy & Light Option</p>
+            <a href="#" class="order-btn" onclick="addToCart('Green Tea',30)">Order Now</a>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Offers -->
+    <!-- Offers -->
+<section id="offers" class="offers">
+    <div class="offer-overlay">
+        <div class="offer-content">
+            <span class="offer-badge">Limited Time Offer</span>
+            <h2>Buy 2 Get 1 Free ☕</h2>
+            <p>Enjoy your Sunday with special chai combo. Offer valid every Sunday only.</p>
+            
+            <div class="offer-timing">
+                ⏰ Every Sunday | 4PM - 8PM
+            </div>
+
+            <a href="#menu" class="offer-btn">Grab The Deal</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Gallery -->
+<section id="gallery" class="gallery">
+    <div class="gallery-header">
+        <h4 class="section-subtitle">Moments at Cafe</h4>
+        <h2>Our <span>Gallery</span></h2>
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Tea">
+            <div class="gallery-overlay">
+                <h3>Kadak Chai</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Coffee">
+            <div class="gallery-overlay">
+                <h3>Cold Coffee</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cafe">
+            <div class="gallery-overlay">
+                <h3>Cafe Vibes</h3>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say ❤️</h2>
+    <p class="testimonial-subtitle">
+        Real stories. Real smiles. Real Chai moments.
+    </p>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-box">
+            <div class="quote">❝</div>
+            <p>
+                Best chai in town! The Kadak Chai is just perfect.
+                Ambience is super relaxing and staff is very friendly.
+            </p>
+            <h4>- Rahul Mehta</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="testimonial-box">
+            <div class="quote">❝</div>
+            <p>
+                Perfect place to chill with friends.
+                Cold Coffee and Masala Sip are my favorites!
+            </p>
+            <h4>- Priya Shah</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="testimonial-box">
+            <div class="quote">❝</div>
+            <p>
+                Sunday offer is amazing! Buy 2 Get 1 Free is the best deal.
+                Highly recommended for chai lovers.
+            </p>
+            <h4>- Arjun Patel</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+    </div>
+</section>
+<section>
+
+</section>
+
+    <!-- Contact -->
+   <!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us ☕</h2>
+    <p class="contact-subtitle">
+        Have a question or just want to say hello? We'd love to hear from you!
+    </p>
+
+    <div class="contact-container">
+
+       <section class="visit-section">
+
+    <div class="visit-card">
+        <h2>Visit Us</h2>
+
+        <div class="info">
+            <p>📍 Chai Junction, Surat, Gujarat</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ chaijunction@email.com</p>
+            <p>🕒 9:00 AM – 10:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
+
+        <form class="contact-form" action="contact_submit.php" method="POST">
+            <input type="text" name="name"  placeholder="Your Name" required>
+            <input type="email"  name="email" placeholder="Your Email" required>
+            <textarea   name="subject" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" name="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<section id="cart" class="cart-section">
+
+    <div class="cart-header">
+        <h2 class="cart-title">🛒 Your Cart</h2>
+        <p class="cart-sub">Fresh Tea & Snacks</p>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+        <p class="empty-cart">Your cart is empty ☕</p>
+    </div>
+
+    <div class="cart-summary">
+        <h3 id="cart-total">Total: ₹0</h3>
+    </div>
+
+    <div class="cart-buttons">
+        <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+        <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
+    </div>
+
+</section>
+
+
+
+   <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <h2>Chai Junction ☕</h2>
+            <p>Chai & Chill with Every Sip</p>
+        </div>
+
+        <div class="footer-social">
+    <a href="https://instagram.com/" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://wa.me/919876543210" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+        <div class="footer-social">
+            <a href="#">🌐</a>
+            <a href="#">📸</a>
+            <a href="#">🐦</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Chai Junction | Designed with ❤️ by Kaushik</p>
+    </div>
+</footer>
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(name, price) {
+    cart.push({name, price});
+    total += price;
+    displayCart();
+}
+
+function displayCart() {
+    let container = document.getElementById("cart-items");
+    container.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        container.innerHTML += `
+            <div class="cart-item">
+                <h4>${item.name}</h4>
+                <p>₹${item.price}</p>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("cart-total").innerText = "Total: ₹" + total;
+}
+
+function removeItem(index) {
+    total -= cart[index].price;
+    cart.splice(index, 1);
+    displayCart();
+}
+
+function clearCart() {
+    cart = [];
+    total = 0;
+    displayCart();
+}
+
+function placeOrder() {
+
+    if(cart.length === 0){
+        alert("Cart is empty!");
+        return;
+    }
+
+    let customer = prompt("Enter Your Name:");
+
+    fetch("./place_order.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            customer_name: customer,
+            items: cart,
+            total_amount: total
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+
+        if(data.status === "success"){
+            alert("Order Placed Successfully!");
+            clearCart();
+        } else {
+            alert("Error: " + data.message);
+            console.log(data);
+        }
+
+    })
+    .catch(err => {
+        console.log("Fetch Error:", err);
+    });
+}
+</script>
+
+</body>
+</html>
